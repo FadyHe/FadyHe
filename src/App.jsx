@@ -1,11 +1,12 @@
-import Logo from "./SVGs/Logo"
+import Hero from "./Components/Hero"
 
 function App() {
 
   return (
-    <>
-    
-    </>
+    <div>
+      <Hero />
+      
+    </div>
   )
 }
 
