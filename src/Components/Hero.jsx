@@ -55,6 +55,7 @@ function Hero() {
               deployment.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+              <a href="#projects">
               <motion.button
                 initial={{y: 0}}
                 animate={{ y: [0, -50 , 0]}}
@@ -62,11 +63,14 @@ function Hero() {
 
                 className="bg-primary text-white font-bold py-3 px-8 rounded-lg shadow-lg shadow-primary/30 transition-all duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-xl hover:shadow-primary/40 transform hover:-translate-y-1">
                 Explore My Work
-              </motion.button>
+                </motion.button>
+                </a>
+                <a href="#contact">
               <button
                 className="bg-primary/10 dark:bg-primary/20 text-primary font-bold py-3 px-8 rounded-lg transition-all duration-300 ease-in-out hover:bg-primary/20 dark:hover:bg-primary/30 transform hover:-translate-y-1 hover:text-white">
                 Get In Touch
               </button>
+              </a>
             </div>
           </div>
         </div>

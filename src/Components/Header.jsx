@@ -3,6 +3,8 @@ import Section from './Section';
 import { Logo } from '../assets/SVGs/Logo';
 import { Git } from '../assets/SVGs/Git';
 import { Linkedin } from '../assets/SVGs/Linkedin';
+import { motion } from 'framer-motion';
+
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +21,20 @@ function Header() {
   return (
     <Section
       id='projects'
-      className='bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 sticky top-0 z-50'>
-      <header className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+      customPaddings=''
+      className='bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700'>
+      <motion.header
+      initial={{ opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      animate={{ transition: { duration: 4 } , ease: "easeInOut" }}
+      className="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
               <div className="w-8 h-8 text-primary">
                 <Logo />
               </div>
-              <a href="#hero"><h2 class="text-xl font-bold text-gray-900 dark:text-white">Fady's Portfolio</h2></a>
+              <a href="#hero"><h2 className="text-xl font-bold text-gray-900 dark:text-white">Fady's Portfolio</h2></a>
             </div>
             <div className="flex items-center gap-4">
               <nav className="hidden md:flex items-center gap-8">
@@ -55,7 +62,7 @@ function Header() {
                 </div>
               </div>
               {isOpen && (
-                <ul className='absolute top-16 right-4 bg-background-light dark:bg-background-dark shadow-lg rounded-md py-2 px-4 flex flex-col gap-5 transition-opacity h-30'>
+                <ul className='absolute top-16 right-0.5 py-3 bg-background-light dark:bg-background-dark shadow-lg rounded-md px-4 justify-center items-center flex flex-col gap-5 transition-opacity '>
                   <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a></li>
                   <li><a onClick={handleLinkClick} className="text-sm font-medium text-primary" href="#projects">Projects</a></li>
                   <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a></li>
@@ -66,7 +73,7 @@ function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </motion.header>
       </Section>
   )
 }
