@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Logo() {
+export function Logo() {
   return (
     <div>
       <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -19,4 +19,4 @@ function Logo() {
   )
 }
 
-export default Logo
+

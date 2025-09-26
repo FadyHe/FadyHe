@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
+import heroImage from '../assets/Gemini_Generated_Image_w23xraw23xraw23x-removebg-preview.png';
 
 function Hero() {
 
@@ -14,7 +15,7 @@ function Hero() {
   };
 
   return (
-    <div className='bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 antialiased'>
+    <div id='hero' className='bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 antialiased'>
       <main className="relative min-h-screen w-full overflow-hidden">
         <div className="absolute top-1/2 -left-1/12 w-1/2 h-1/2 rounded-full sphere-gradient opacity-50 animate-float"></div><div className="absolute -top-1/4 -left-1/12 w-1/2 h-1/2 rounded-full sphere-gradient opacity-50 animate-float"></div>
         <div
@@ -28,7 +29,7 @@ function Hero() {
         <div className="relative z-20 flex min-h-screen items-center justify-center p-4">
           <div className="mx-auto w-full max-w-4xl text-center">
             <div className="z-10 mb-8 transform transition-transform duration-500 ">
-              <p className='text-5xl font-medium text-[#5e5ed1] mb-2'>I'm <span className='text-white'>Fady Helmy</span></p>
+              <p className='text-5xl font-medium text-[#5e5ed1] mb-2 z-10'>I'm <span className='text-white'>Fady Helmy</span></p>
               <p className="text-lg font-medium text-[#5e5ed1] mb-2">Frontend Developer &amp; Aspiring Full-Stack Engineer</p>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight text-gray-900 dark:text-white">
                 Transforming Ideas into 
@@ -40,7 +41,7 @@ function Hero() {
                     initial={{ opacity: 0, scale: 1 }}
                     whileInView={{
                       opacity: 1,
-                      transition: { duration: 2, ease: "easeInOut" },
+                      transition: { duration: 2, ease: 'backInOut',direction:'left' },
                     }}
                     className='underlined w-100 inline-block z-2 absolute -bottom-2'
                   ></motion.div>
