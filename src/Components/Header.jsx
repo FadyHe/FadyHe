@@ -31,16 +31,18 @@ function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
-              <div className="w-8 h-8 text-primary">
+              <div className="w-8 h-8 text-[#26264e]">
                 <Logo />
               </div>
-              <a href="#hero"><h2 className="text-xl font-bold text-gray-900 dark:text-white">Fady's Portfolio</h2></a>
+              <a href="#hero" className="text-xl font-bold text-gray-300 "><h2>Fady's Portfolio</h2></a>
             </div>
             <div className="flex items-center gap-4">
               <nav className="hidden md:flex items-center gap-8">
                 <a className="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
                 <a className="text-sm font-medium text-primary" href="#projects">Projects</a>
+                <a className="text-sm font-medium hover:text-primary transition-colors" href="#skills">Skills</a>
                 <a className="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
+
               </nav>
 
               
@@ -66,6 +68,7 @@ function Header() {
                   <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a></li>
                   <li><a onClick={handleLinkClick} className="text-sm font-medium text-primary" href="#projects">Projects</a></li>
                   <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a></li>
+                  <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#skills">Skills</a></li>
                 </ul>
               )}
             </nav>
