@@ -1,5 +1,6 @@
 import Hero from "./Components/Hero"
 import Projects from "./Components/Projects"
+import Skills from "./Components/Skills"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Hero />
       <Projects />
+      <Skills />
     </div>
   )
 }
