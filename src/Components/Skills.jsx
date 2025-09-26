@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from './Section'
-import { hr } from 'motion/react-client'
+
 
 function Skills() {
   return (

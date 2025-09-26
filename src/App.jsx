@@ -1,3 +1,4 @@
+import About from "./Components/About";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero"
 import Projects from "./Components/Projects"
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Projects />
       <Skills />
+      <About />
     </div>
   )
 }

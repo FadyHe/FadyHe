@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from "motion/react"
-import heroImage from '../assets/Gemini_Generated_Image_w23xraw23xraw23x-removebg-preview.png';
+import { motion, AnimatePresence } from "framer-motion"
+import heroImage from '../assets/1758848932439.jpg';
 
 function Hero() {
 
