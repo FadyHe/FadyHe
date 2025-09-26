@@ -20,7 +20,6 @@ function Header() {
 
   return (
     <Section
-      id='projects'
       customPaddings=''
       className='bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200 sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700'>
       <motion.header
@@ -38,9 +37,9 @@ function Header() {
             </div>
             <div className="flex items-center gap-4">
               <nav className="hidden md:flex items-center gap-8">
-                <a className="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
-                <a className="text-sm font-medium text-primary" href="#projects">Projects</a>
+                <a className="text-sm font-medium hover:text-primary" href="#projects">Projects</a>
                 <a className="text-sm font-medium hover:text-primary transition-colors" href="#skills">Skills</a>
+                <a className="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
                 <a className="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a>
 
               </nav>
@@ -65,10 +64,10 @@ function Header() {
               </div>
               {isOpen && (
                 <ul className='absolute top-16 right-0.5 py-3 bg-background-light dark:bg-background-dark shadow-lg rounded-md px-4 justify-center items-center flex flex-col gap-5 transition-opacity '>
-                  <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a></li>
-                  <li><a onClick={handleLinkClick} className="text-sm font-medium text-primary" href="#projects">Projects</a></li>
-                  <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a></li>
+                  <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary" href="#projects">Projects</a></li>
                   <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#skills">Skills</a></li>
+                  <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#about">About</a></li>
+                  <li><a onClick={handleLinkClick} className="text-sm font-medium hover:text-primary transition-colors" href="#contact">Contact</a></li>
                 </ul>
               )}
             </nav>

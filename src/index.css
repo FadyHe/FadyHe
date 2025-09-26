@@ -72,6 +72,30 @@
 .animate-fade-in-up {
     animation: fade-in-up 1s ease-out forwards;
 }
+.skill-progress-bar {
+      position: relative;
+      height: 6px;
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    .skill-progress {
+      position: absolute;
+      height: 100%;
+      background-color: #1313ec;
+      border-radius: 9999px;
+    }
+    .dark .skill-progress-bar {
+      background-color: #373752;
+    }
+    .learning-dot {
+        height: 8px;
+        width: 8px;
+        border-radius: 9999px;
+        background-color: #1313ec;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
 }
 @keyframes gradient-slide {
     0% {
@@ -100,10 +124,14 @@
         transform: translateY(0);
     }
 }
+@keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: .5; }
+    }
 
 #nav-icon3 {
-  width: 50px;
-  height: 45px;
+  width: 30px;
+  height: 25px;
   position: relative;
   margin: 20px auto;
   -webkit-transform: rotate(0deg);
@@ -119,7 +147,7 @@
   #nav-icon3 span {
   display: block;
   position: absolute;
-  height: 7px;
+  height: 4px;
   width: 100%;
   background: white;
   border-radius: 3px;
@@ -140,15 +168,15 @@
 
 
 #nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 18px;
+  top: 10px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 36px;
+  top: 20px;
 }
 
 #nav-icon3.open span:nth-child(1) {
-  top: 18px;
+  top: 10px;
   width: 0%;
   left: 50%;
 }
@@ -168,7 +196,7 @@
 }
 
 #nav-icon3.open span:nth-child(4) {
-  top: 18px;
+  top: 10px;
   width: 0%;
   left: 50%;
 }
