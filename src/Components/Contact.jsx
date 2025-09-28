@@ -37,7 +37,7 @@ function Contact() {
             </div>
             <p className="text-lg font-bold text-slate-800 dark:text-slate-200">Email</p>
           </a>
-          <a className="group flex flex-col items-center justify-center space-y-3 rounded-xl bg-background-light/50 p-6 text-center transition-all duration-300 hover:bg-primary/10 dark:bg-background-dark/50 dark:hover:bg-primary/20" download="" href="resume.pdf">
+          <a className="group flex flex-col items-center justify-center space-y-3 rounded-xl bg-background-light/50 p-6 text-center transition-all duration-300 hover:bg-primary/10 dark:bg-background-dark/50 dark:hover:bg-primary/20" download="Fady Helmy" href="../assets/Resume.pdf">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
               <span className="material-symbols-outlined !text-4xl">
                 <Download />
