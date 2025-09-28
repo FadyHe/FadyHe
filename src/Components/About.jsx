@@ -1,7 +1,6 @@
-import React from 'react'
 import Section from './Section'
 import { motion } from "motion/react";
-import myPic from '../assets/1758848932439.jpg'
+import myPic from '../assets/me2.png'
 
 function About() {
   const fadeInUp = {
@@ -52,20 +51,26 @@ function About() {
               variants={stagger}
             >
               {/* Image Section */}
-              <motion.div
-                className="relative group"
+              
+                
+              <motion.img
                 variants={fadeInLeft}
-              >
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-purple-600/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/25 hover:shadow-primary/40 transition-all duration-500 group-hover:scale-105">
-                  <img
-                    src={myPic}
-                    className='aspect-auto h-150 rounded-3xl mx-auto'
-                    alt="About me"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </motion.div>
+                src={myPic}
+                className='mx-auto relative rounded-3xl overflow-hidden transition-all duration-500 hover:scale-105'
+                style={{
+                  filter: 'drop-shadow(0 20px 40px rgba(0, 0, 255, 0.2))',
+                  transition: 'filter 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.filter = 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3)) drop-shadow(0 10px 30px rgba(59, 130, 246, 0.4))';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.filter = 'drop-shadow(0 20px 40px rgba(0, 0, 255, 0.2))';
+                }}
+                alt="About me"
+              />
+                
+              
 
               {/* Content Section */}
               <motion.div
@@ -79,7 +84,7 @@ function About() {
                   }}
                   
                 >
-                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-primary to-purple-600 rounded-full"></div>
+                  <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b bg-primary rounded-full"></div>
                   <motion.h1
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent"
                     
@@ -149,7 +154,7 @@ function About() {
                         viewBox="0 0 24 24"
                         initial={{ x: 0 }}
                         whileHover={{ x: 3 }}
-                        transition={{ type: "spring", stiffness: 300 }}
+                        
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </motion.svg>
