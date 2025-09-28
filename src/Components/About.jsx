@@ -99,6 +99,9 @@ function About() {
                   initial="initial"
                   animate="animate"
                 >
+                  <h1 className='text-2xl leading-relaxed hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-300 font-bold'>Hey, <br />
+                    My name is Fady Helmy. I'm a bachelor in computer science in <span className='text-primary/100'>Tanta University</span>, with a passion for web development 
+                  </h1>
                   <motion.p
                     className="text-lg leading-relaxed hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-300"
                     variants={fadeInUp}
